@@ -9,13 +9,14 @@
       "withStyle": true,
       "withTest": false,
       "withStory": false,
-      "withLazy": true
+      "withLazy": true,
+      "withIndex": true
     },
     "c": {
       "customTemplates": {
-        "component": "templates/component/TemplateNamePage.tsx",
-        "style": "templates/component/TemplateName.module.scss",
-        "index": "templates/component/index.ts"
+        "component": "src/templates/component/TemplateName.tsx",
+        "style": "src/templates/component/TemplateName.module.scss",
+        "index": "src/templates/component/index.ts"
       },
       "path": "src/components",
       "withStyle": true,
@@ -26,9 +27,10 @@
     },
     "lp": {
       "customTemplates": {
-        "component": "templates/lazyPage/TemplateNamePage.tsx",
-        "style": "templates/lazyPage/TemplateName.module.scss",
-        "index": "templates/component/index.ts"
+        "component": "src/templates/lazyPage/TemplateNamePage.tsx",
+        "style": "src/templates/lazyPage/TemplateName.module.scss",
+        "lazy": "src/templates/lazyPage/TemplateNamePage.lazy.tsx",
+        "index": "src/templates/lazyPage/index.ts"
       },
       "path": "src/pages",
       "withStyle": true,
@@ -39,15 +41,15 @@
     },
     "p": {
       "customTemplates": {
-        "component": "templates/page/TemplateNamePage.tsx",
-        "style": "templates/page/TemplateName.module.scss",
-        "index": "templates/component/index.ts"
+        "component": "src/templates/page/TemplateNamePage.tsx",
+        "style": "src/templates/page/TemplateName.module.scss",
+        "index": "src/templates/page/index.ts"
       },
       "path": "src/pages",
       "withStyle": true,
       "withTest": false,
       "withStory": false,
-      "withLazy": true,
+      "withLazy": false,
       "withIndex": true
     }
   }
