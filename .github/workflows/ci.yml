@@ -11,15 +11,17 @@ jobs:
         node_version: [14]
 
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v1
         with:
           node_version: ${{ matrix.node_version }}
 
-      - name: Run CI
-        run: |
-          npm install # or yarn install
-          npm run lint # or yarn lint
-          # npm run test # or yarn test
-          npm run build # or yarn build
+      - name: Install npm packages
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      #- name: Test
+      #  run: npm run test
+      - name: Build
+        run: npm run build
